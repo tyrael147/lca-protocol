@@ -30,4 +30,10 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_book_theme'
+html_context = {
+   "default_mode": "light",
+    "reading_mode": "light"
+}
+
+
 html_static_path = ['_static']
