@@ -1,5 +1,0 @@
-Licensing
-=========
-
-placeholder
-
