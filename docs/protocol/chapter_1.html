@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Project organization &#8212; lca-protocol 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'protocol/chapter_1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Project description" href="chapter_2.html" />
+    <link rel="prev" title="A protocol for programmatic LCA" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">lca-protocol 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Motivation</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Protocol</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1. Project organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter_2.html">2. Project description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter_3.html">3. Reproducible modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter_4.html">4. Reproducible analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter_5.html">5. Code style and linting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter_6.html">6. Licensing</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/protocol/chapter_1.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project organization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-structure">1.1. Folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">1.2. Version control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">1.3. Naming conventions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="project-organization">
+<h1><span class="section-number">1. </span>Project organization<a class="headerlink" href="#project-organization" title="Link to this heading">#</a></h1>
+<p>This section describes the characteristics that should rule project’s organization.
+Three subsections are proposed with the objective of being the initial scaffold of any Life Cycle-ish project.</p>
+<section id="folder-structure">
+<h2><span class="section-number">1.1. </span>Folder structure<a class="headerlink" href="#folder-structure" title="Link to this heading">#</a></h2>
+<p>The folders should be organized in such a way that:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The root folder is exclusively reserved for subfolders or files containing environmental variables, configuration files, or temporal files.</p></li>
+<li><p>The risk of exposing undesired data is minimized.</p></li>
+<li><p>Each folder contains files that share the same functionality or purpose.</p></li>
+<li><p>The directory tree has the minimum number of leafs so folders do not repeat purpose.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">PRACTITIONER</span></code> should not have to modify the folder structure during the iterative development phase or
+while conducting collaborative work.</p></li>
+<li><p>A file should always belong to just one folder without ambiguity.</p></li>
+<li><p>The project SHOULD be self contained, meaning that any code SHOULD not call parent folders <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</div></blockquote>
+<p>We propose a folder structure, based and inspired on recommendations provided by <a class="reference external" href="https://github.com/the-turing-way/reproducible-project-template">The Turing Way</a>, <a class="reference external" href="https://github.com/ccs-amsterdam/compendium">CCS-Amsterdam</a>, <a class="reference external" href="https://github.com/pyscaffold/pyscaffoldext-dsproject">pyscaffold</a>, and a <a class="reference external" href="https://github.com/drivendataorg/cookiecutter-data-science">cookiecutter-template</a> template.</p>
+<p>The folder structure should resemble this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{{project_name}}</span>
+<span class="go">├── .env    &lt;- File containing definitions for environmental variables</span>
+<span class="go">├── .bw2projects    &lt;- Folder used to store required in packages like brightway</span>
+<span class="go">├── data</span>
+<span class="go">│   ├── private     &lt;- Everything here is ignored in .gitignore</span>
+<span class="go">│   │   ├── processed</span>
+<span class="go">│   │   │   └── README.md</span>
+<span class="go">│   │   ├── raw</span>
+<span class="go">│   │   │   └── README.md</span>
+<span class="go">│   │   └── README.md</span>
+<span class="go">│   ├── processed   &lt;- Ultimate/canonical form of the data before being ingested into a model.</span>
+<span class="go">│   │   └── README.md</span>
+<span class="go">│   └── raw   &lt;- Pristine and unmodified data resources.</span>
+<span class="go">│       └── README.md</span>
+<span class="go">├── environment.yaml  &lt;- To build environment when conda is installed.</span>
+<span class="go">├── requirements.txt  &lt;- To intall dependencies using pypi.</span>
+<span class="go">├── models  &lt;- Contains serialized, ready-to-use models.</span>
+<span class="go">│   └── README.md</span>
+<span class="go">├── README.md &lt;- General description of the project</span>
+<span class="go">└── src &lt;- Contains pure code</span>
+<span class="go">    ├── analysis &lt;- Scripts and notebooks used to analyse results.</span>
+<span class="go">    │   └── README.md</span>
+<span class="go">    ├── processing  &lt;- Routines used to process raw data.</span>
+<span class="go">    │   └── README.md</span>
+<span class="go">    └── models  &lt;- Scripts and notebooks containing the code that generates models.</span>
+<span class="go">        └── README.md</span>
+</pre></div>
+</div>
+</section>
+<section id="version-control">
+<h2><span class="section-number">1.2. </span>Version control<a class="headerlink" href="#version-control" title="Link to this heading">#</a></h2>
+<p>As exhaustively explained in Community<a class="footnote-reference brackets" href="#footcite-turing2021turing" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, version control is a practice that aims to record all the changes made to files inside a folder.
+In an LCA project, keeping track of these changes is fundamental since most of the modelling stages constantly consume (e.g., inventories) and produce (e.g., life cycle impacts) data files.
+In a collaborative environment, maintaining a record of versions permits the <code class="docutils literal notranslate"><span class="pre">PRACTIONER</span></code> to have a control of the inventories or parameters that are being feed to the LCA model.
+Similarly, this practice can also guarantee the traceability of the inventories or results that come from the LCA model and that will be fed into other computational pipelines.</p>
+<p>Despite of the existence of different tools that fulfill this purpose, the protocol proposes <a class="reference external" href="https://git-scm.com/">git</a> as the most convenient version control system since it is free and open-source, it is compatible with multiple Operating Systems, and it has been widely adopted among multiple disciplines <a class="footnote-reference brackets" href="#f2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>In the protocol, <cite>git</cite> technology MUST be adopted to ensure that:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">PRACTITIONER</span></code> can use it to keep track of the history of changes of all the files in the project.</p></li>
+<li><p>Many <code class="docutils literal notranslate"><span class="pre">PRACTITIONERs</span></code> can work simultaneously or with different versions of the same project.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">REVIEWER</span></code> is capable of exploring the progress and versions of the project.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">PRACTITIONER</span></code> can determine folders or files are public or private according to the project needs.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">PRACTITIONER</span></code> can identify the author of a specific change.</p></li>
+<li><p>Both the <code class="docutils literal notranslate"><span class="pre">REVIEWER</span></code> and the <code class="docutils literal notranslate"><span class="pre">PRACTITIONER</span></code> can download or upload the projectrepository to a remote hosting website (e.g., github, gitlab or bitbucket).</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Section <a class="reference internal" href="#folder-structure">Folder Structure</a> has been elaborated having <code class="docutils literal notranslate"><span class="pre">git</span></code> in mind.
+In this sense, <code class="docutils literal notranslate"><span class="pre">git</span></code> can be used to prevent private files to be exposed by including them into a configuration file named <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>.
+For instance, the folder structure presented in the previous section should contain a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span>cat<span class="w"> </span>.gitignore
+<span class="go">.bw2projects</span>
+<span class="go">data/private/*</span>
+<span class="go">.env</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="naming-conventions">
+<h2><span class="section-number">1.3. </span>Naming conventions<a class="headerlink" href="#naming-conventions" title="Link to this heading">#</a></h2>
+<p>TODO: This is exhaustively clarified in <a class="reference external" href="https://book.the-turing-way.org/project-design/filenaming">https://book.the-turing-way.org/project-design/filenaming</a>, verify if adaptation is needed.</p>
+<p class="rubric">Footnotes</p>
+<div class="docutils container" id="id4">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="footcite-turing2021turing" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. <em>Zenodo</em>, 2021.</p>
+</aside>
+</aside>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">2</a><span class="fn-bracket">]</span></span>
+<p>LCA packages like <cite>brightway</cite> MAY require to store data on disk. This means that the <code class="docutils literal notranslate"><span class="pre">PRACTITIONER</span></code> MUST ensure that any <cite>brightway</cite> <a class="reference external" href="https://docs.brightway.dev/en/latest/content/faq/data_management.html#how-do-i-change-my-data-directory">environmental variable</a> refers to a folder located inside the project.</p>
+</aside>
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>The protocol is not focused on providing guidance on the use of <code class="docutils literal notranslate"><span class="pre">git</span></code>. Multiple tutorials can be found <a class="reference external" href="https://learn.microsoft.com/en-us/training/modules/collaborate-with-git/">here</a> and <a class="reference external" href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">here</a>.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">A protocol for programmatic LCA</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Project description</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-structure">1.1. Folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">1.2. Version control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">1.3. Naming conventions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gustavo Larrea, Tomas Navarrete
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Gustavo Larrea, Tomas Navarrete.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

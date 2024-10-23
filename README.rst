@@ -23,7 +23,7 @@ tomas.navarrete@list.lu
 ♻️ License
 ==========
 
-To be defined
+MIT
 
 Contributors ✨
 ===============
