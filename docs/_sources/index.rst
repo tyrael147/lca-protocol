@@ -1,7 +1,7 @@
 
-======================================================================================
+================================================================================================
 A protocol prototype to enhance replicability and reproducibility in Life Cycle Oriented studies
-======================================================================================
+================================================================================================
 
 This site presents a first prototype of an LCA-oriented protocol that consists on guidelines and checkpoints for LCA practitioners that can facilitate the generation of reproducible research outputs. 
 The main :ref:`protocol <protocol>` draft was built following current practices used in other research fields in combination with the needs of programmatic LCA.
@@ -13,11 +13,11 @@ bw2scaffold
 While still in diapers, we are developing a `templating tool <https://git.list.lu/gustavo.larrea/replicable-lca>`_ to automate the setup of \
 Life Cycle Oriented projects compliant with the protocol. 
 
-It can be installed like this:
+It can be installed like this (try the `develop` branch):
 
 .. code-block:: console
 
-    pip install git+ssh@git.list.lu:gustavo.larrea/replicable-lca.git
+    pip install git+https://git.list.lu/gustavo.larrea/replicable-lca.git@develop
 
 bw2scaffold is an open-source project, contributions are welcomed.
 
@@ -45,7 +45,7 @@ MIT
 
 
 Contributors ✨
-==============
+===============
 
 Gustavo Larrea
 
