@@ -1,6 +1,6 @@
 
 ======================================================================================
-A Protocol to enhance replicability and reproducibility in Life Cycle Oriented studies
+A protocol prototype to enhance replicability and reproducibility in Life Cycle Oriented studies
 ======================================================================================
 
 This site presents a first prototype of an LCA-oriented protocol that consists on guidelines and checkpoints for LCA practitioners that can facilitate the generation of reproducible research outputs. 
