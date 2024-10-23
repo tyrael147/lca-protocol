@@ -1,7 +1,7 @@
 
-===================================
-Replicable and Reusable LCA project
-===================================
+======================================================================================
+A Protocol to enhance replicability and reproducibility in Life Cycle Oriented studies
+======================================================================================
 
 This site presents a first prototype of an LCA-oriented protocol that consists on guidelines and checkpoints for LCA practitioners that can facilitate the generation of reproducible research outputs. 
 The main :ref:`protocol <protocol>` draft was built following current practices used in other research fields in combination with the needs of programmatic LCA.
@@ -18,7 +18,7 @@ tomas.navarrete@list.lu
 ♻️ License
 ==========
 
-(MIT) In process
+MIT
 
 
 Contributors ✨
