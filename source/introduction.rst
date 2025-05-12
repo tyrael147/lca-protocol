@@ -12,10 +12,11 @@ New modelling steps like parametric and algebraic formulations :footcite:p:`joli
     :alt: Disentangling modern LCA workflows
 
 Disentangling modern LCA workflows
+----------------------------------
 
 The sophistication of modelling workflows comes with a price since it adds another layer of difficulty when it respects to providing a transparent, comprehensive and reproducible description of the LCA study. 
 Such reproducibility is important since it is a fundamental element in the development of any scientific field. 
-While the necessity of incorporating transparency principles in LCA has been discussed [4], not much attention has been provided to the lack of reusability and reproducibility of the methodologies and calculation workflows that are used in the LCI step. 
+While the necessity of incorporating transparency principles in LCA has been discussed :footcite:p:`ghose2024can`, not much attention has been provided to the lack of reusability and reproducibility of the methodologies and calculation workflows that are used in the LCI step. 
 While useful, existing standards and data formats (e.g., ISO 14048) are designed to contain data specifications, but not to necessarily enhance the reproducibility of the shared data nor the LCA study itself :footcite:p:`ghose2024can`. 
 This implies that the reproduction of computational workflows that generated certain LCI data depend on the clarity of the report or manuscript accompanying such data, which can vary depending on the LCA practitioners. 
 
@@ -39,7 +40,8 @@ While preliminary, we analyzed the potential implications of the usage of the re
     :align: center
     :alt: Benefits of implementing a protocol 
 
-Potential benefits of a protocol.
+Potential benefits of a protocol
+================================
 
 As it can be observed in `figure <protocol_benefits>`_ above, protocol compliance can provide early benefits to the practitioner in terms of facilitating collaboration due to the enhanced quality control, and the availability of history tracking. 
 Moreover, this can also ease the verification of methods and workflows at early stages of the modelling. 
